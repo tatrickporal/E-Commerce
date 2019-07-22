@@ -1,0 +1,14 @@
+{{extend 'layout.html'}}
+{{block head}}
+<link href="{{=URL('static', 'css/order_page.css')}}" rel="stylesheet" type="text/css" />
+{{end}}
+
+
+{{for order in past_orders:}}
+    <div class="order-box">
+        <div class="order-product">{{=order.product_ref}}</div>
+        <div class="order-specifics">{{=order.quantity}} items for a total of ${{=order.total_order_price}}</div>
+        <br>
+        <div class="product-owner">Sold by: {{=order.product_owner}}</div>
+    </div>
+{{pass}}

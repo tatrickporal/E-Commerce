@@ -1,0 +1,53 @@
+{{extend 'layout.html'}}
+{{block head}}
+<link href="{{=URL('static', 'css/product_page.css')}}" rel="stylesheet" type="text/css" />
+{{end}}
+
+<div class="main_content">
+    <div class="product-box">
+        <div class="product-text">
+            <p class="product-info">
+            <span class="product-name">{{=row.product_name}}</span> <span class="price">${{=row.price}}</span>
+            </p>
+            <p class="product-description">
+                {{=row.product_description}}
+            </p>
+            <p class="product-owner">
+                Sold by: {{=product_owner.first_name}} {{=product_owner.last_name}}, {{=product_owner.username}} {{=product_owner.email}}   
+            </p>
+        </div>
+
+        <div class="attributes">
+            {{=order_form}}
+        </div>
+    </div> 
+    <h3 style="text-align:center;">
+        Read reviews below<span><a href="{{=URL('default', 'submit_review', args=[row.id])}}"> or submit one of your own</a></span>!
+    </h3>
+    
+    {{for review in reviews_row:}}
+        <div class="review-box">
+            <div class="review-info">
+                <div class="review-text" style="text-align:center;">
+                        "{{=review.review}}"
+                </div>
+                <p style="text-align:right; color:black;">
+                        - {{=review.author}}, {{=review.date_posted}}
+                </p>
+                <p style="text-align:right; color:black;">
+                        {{=review.score}} / 10
+                        {{if review.buy_again:}}
+                            <p style="text-align:right; color:green;">
+                                I would buy again! :)
+                            </p>
+                        {{else:}}
+                            <p style="text-align:right; color:red;">
+                                I wouldn't buy again :(
+                            </p>
+                        {{pass}} 
+                </p>
+            </div>
+        </div>
+            
+    {{pass}}
+</div>

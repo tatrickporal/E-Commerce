@@ -1,0 +1,53 @@
+input[type="number"]{
+    margin:10px 0 10px 10px;
+    width:50px;
+    border:solid #26A69A 1px;
+    border-radius:5px;
+}
+
+.product-box{
+    margin-top:15px;
+    
+    border:solid #26A69A 3px;
+    border-radius:5px;
+    font-size:1em;
+    color:#353535;
+}
+.review-box{
+    margin:5% 5% 0 5%;
+    border:solid #26A69A 3px;
+    border-radius:5px;
+    font-size:1em;
+    color:#353535;
+}
+
+.review-info{
+    margin:2% 10% 0 10% ;
+    color:#353535;
+}
+.price{
+
+    font-size:1.5em;
+}
+
+.product-text{
+    margin:10px;
+}
+
+.product-name{
+    color:black;
+    font-size:2em;
+}
+
+.product-description{
+    font-size:1.3em;
+}
+
+.review-button{
+    margin:10px 0 10px 10px;
+    color:white;
+}
+
+.attributes{
+    margin-top:5%;
+}

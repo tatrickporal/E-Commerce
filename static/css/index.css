@@ -1,0 +1,30 @@
+.main-content{
+    margin:0 15% 0 15% ;
+}
+input{
+    line-height: 4;
+}
+.product-box{
+    margin-top:15px;
+    border:solid #26A69A 3px;
+    border-radius:5px;
+    font-size:1em;
+    color:#353535;
+}
+.price{
+    font-size:1em;
+}
+
+.product-text{
+    margin:10px;
+}
+
+.product-name{
+    color:black;
+    font-size:1.6em;
+}
+
+.review-button{
+    margin:10px 0 10px 10px;
+    color:white;
+}

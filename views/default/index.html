@@ -1,0 +1,24 @@
+{{extend 'layout.html'}}
+
+{{block head}}
+<link href="{{=URL('static', 'css/index.css')}}" rel="stylesheet" type="text/css" />
+{{end}}
+<div class="main-content">
+  {{for row in rows:}}
+    <div class="product-box">
+      <div class="product-text">
+        <p class="product-info">
+          <span class="product-name">{{=row.product_name}}</span> <span class="price">${{=row.price}}</span>
+        </p>
+        <p class="product-description">
+          {{=row.product_description}}
+        </p>
+        {{if row.avg_rating == 0:}}
+          <a href="{{=URL('default', 'submit_review', args=[row.id])}}">No reviews yet, submit one!</a>
+        {{else:}}
+          Average Rating: <a href="{{=URL('default', 'product_page', args=[row.id])}}">{{=row.avg_rating}}/100</a>
+        {{pass}}
+      </div>
+    </div> 
+  {{pass}}
+</div>

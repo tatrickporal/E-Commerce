@@ -1,0 +1,9 @@
+
+.order-box{
+    margin:15px 10% 5% 10%;
+    
+    border:solid #26A69A 3px;
+    border-radius:5px;
+    font-size:1em;
+    color:#353535;
+}
